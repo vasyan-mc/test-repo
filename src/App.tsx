@@ -17,7 +17,7 @@ function App() {
 				const checkAdmin = await isAdmin();
 				const { data } = await supabase.from("list").select("*");
 
-				setVpnList(data);
+				setVpnList(data ?? []);
 				setAdmin(checkAdmin);
 			} catch (e) {
 				if (e instanceof Error) {

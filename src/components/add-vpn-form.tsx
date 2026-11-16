@@ -162,7 +162,7 @@ export const AddVpnForm = () => {
 
 					<Select
 						value={country}
-						onValueChange={setCountry}
+						onValueChange={(val) => setCountry(val ?? "")}
 						disabled={isLoading}
 					>
 						<SelectTrigger className="w-[145px]">
